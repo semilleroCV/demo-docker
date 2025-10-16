@@ -1,0 +1,46 @@
+services:
+  train:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pytorch-uv-app:latest
+    container_name: pytorch-train
+    command: uv run python train.py
+    volumes:
+      - ./data:/app/data
+      - ./model:/app/model
+      - ./runs:/app/runs
+      - ./checkpoints:/app/checkpoints
+    # environment:
+    #   - CUDA_VISIBLE_DEVICES=0
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+    restart: "no"
+
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pytorch-uv-app:latest
+    container_name: pytorch-test
+    command: uv run python test.py
+    volumes:
+      - ./data:/app/data
+      - ./model:/app/model
+      - ./runs:/app/runs
+      - ./checkpoints:/app/checkpoints
+    # environment:
+    #   - CUDA_VISIBLE_DEVICES=0
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+    restart: "no"

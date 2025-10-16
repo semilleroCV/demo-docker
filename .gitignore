@@ -70,3 +70,7 @@ logs/
 Thumbs.db
 
 llm.txt
+
+checkpoints/*
+data/*
+
