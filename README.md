@@ -1,8 +1,8 @@
-# 🖼️ CIFAR-10 Computer Vision Demo with Docker
+# CIFAR-10 Computer Vision Demo with Docker
 
 A comprehensive demonstration of deep learning for computer vision using PyTorch, Docker, and modern MLOps practices. This project trains a Convolutional Neural Network (CNN) on the CIFAR-10 dataset with production-ready training practices.
 
-## 📚 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -18,7 +18,7 @@ A comprehensive demonstration of deep learning for computer vision using PyTorch
 - [Troubleshooting](#troubleshooting)
 - [Learning Resources](#learning-resources)
 
-## 🎯 Overview
+## Overview
 
 This project demonstrates:
 - **Deep Learning**: CNN architecture for image classification
@@ -43,7 +43,7 @@ The CIFAR-10 dataset consists of 60,000 32x32 color images in 10 classes:
 
 **Split**: 50,000 training images + 10,000 test images
 
-## ✨ Features
+## Features
 
 ### Modern Training Techniques
 - ✅ **Mixed Precision Training** (AMP) for faster computation
@@ -63,7 +63,7 @@ The CIFAR-10 dataset consists of 60,000 32x32 color images in 10 classes:
 - 🚀 **TorchServe Integration** for production model serving
 - 🔌 **REST API** for real-time inference
 
-## 📋 Prerequisites
+## Prerequisites
 
 - **Docker** (version 20.10+)
 - **Docker Compose** (version 2.0+)
@@ -71,7 +71,7 @@ The CIFAR-10 dataset consists of 60,000 32x32 color images in 10 classes:
 
 No Python installation required! Everything runs in Docker containers.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Option 1: Using Docker Compose (Recommended)
 
@@ -109,7 +109,7 @@ docker run --rm -v $(pwd)/checkpoints:/app/checkpoints \
                 cifar10-training python test.py
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 cv_demo/
@@ -138,7 +138,7 @@ cv_demo/
 └── 📜 publish_docker.sh    # Docker Hub publishing script
 ```
 
-## 💻 Usage
+## Usage
 
 ### Training
 
@@ -194,7 +194,7 @@ uv run python train.py
 uv run python test.py
 ```
 
-## 📈 Training Details
+## Training Details
 
 ### Model Architecture
 
@@ -233,7 +233,7 @@ This provides:
 - Escape from local minima
 - Fine-tuning in later epochs
 
-## 📊 Monitoring with TensorBoard
+## Monitoring with TensorBoard
 
 View training progress in real-time using the integrated TensorBoard service:
 
@@ -271,7 +271,7 @@ Open http://localhost:6006 in your browser to see:
 
 **Pro Tip**: Start TensorBoard before training to see metrics update in real-time!
 
-## 🚢 Docker Hub Deployment
+## Docker Hub Deployment
 
 Publish your trained model to Docker Hub:
 
@@ -301,7 +301,7 @@ The script will:
 docker pull <your-username>/cifar10-training:latest
 ```
 
-## 🚀 Model Serving with TorchServe
+## Model Serving with TorchServe
 
 Deploy your trained model as a production REST API using TorchServe!
 
@@ -408,7 +408,7 @@ curl http://localhost:8081/models/cifar10_classifier
 docker compose --profile serving down
 ```
 
-## 📊 Results
+## Results
 
 ### Expected Performance
 
@@ -441,7 +441,7 @@ truck     : 87.3% (873/1000)
 ============================================================
 ```
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -476,7 +476,7 @@ ls -la checkpoints/
 docker compose up train
 ```
 
-## 📚 Learning Resources
+## Learning Resources
 
 ### Computer Vision Fundamentals
 - [CS231n: CNNs for Visual Recognition](http://cs231n.stanford.edu/)
@@ -498,15 +498,15 @@ docker compose up train
 - [Super-Convergence: Very Fast Training of Neural Networks Using Large Learning Rates](https://arxiv.org/abs/1708.07120)
 - [When Does Label Smoothing Help?](https://arxiv.org/abs/1906.02629)
 
-## 🤝 Contributing
+## Contributing
 
 This is an educational project. Suggestions and improvements are welcome!
 
-## 📝 License
+## License
 
 MIT License - Feel free to use for educational purposes.
 
-## 👥 Authors
+## Authors
 
 Computer Vision Seminar - University Demo Project
 
