@@ -3,7 +3,7 @@ import torchvision
 import torchvision.transforms as transforms
 
 
-def get_device():
+def get_device() -> torch.device:
     '''
         suppport cuda, apple silicon, and cpu
     '''
