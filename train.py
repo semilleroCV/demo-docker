@@ -22,7 +22,7 @@ LOG_DIR = './runs'
 
 # Training hyperparameters
 BATCH_SIZE = 128  # Larger batch size for better GPU utilization
-NUM_EPOCHS = 100
+NUM_EPOCHS = 20
 INITIAL_LR = 3e-4  # Good starting point for AdamW
 WEIGHT_DECAY = 0.01  # L2 regularization
 MAX_GRAD_NORM = 1.0  # Gradient clipping threshold

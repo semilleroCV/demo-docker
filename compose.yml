@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     image: pytorch-uv-app:latest
     container_name: pytorch-train
-    command: uv run python train.py
+    command: python train.py
     volumes:
       - ./data:/app/data
       - ./model:/app/model
@@ -28,7 +28,7 @@ services:
       dockerfile: Dockerfile
     image: pytorch-uv-app:latest
     container_name: pytorch-test
-    command: uv run python test.py
+    command:  python test.py
     volumes:
       - ./data:/app/data
       - ./model:/app/model

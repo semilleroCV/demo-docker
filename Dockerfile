@@ -2,7 +2,7 @@
 FROM python:3.12-slim
 
 # Install uv from its official GitHub Container Registry
-COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+##COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -14,7 +14,9 @@ COPY . /app
 # --frozen ensures that the dependencies are installed based on a uv.lock file,
 # providing deterministic builds.
 # --no-cache prevents uv from using its cache, which can be useful in CI/CD environments.
-RUN uv sync --frozen --no-cache
+#RUN uv sync --frozen --no-cache
+RUN pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+RUN pip3 install matplotlib scikit-learn albumentations tqdm tensorboard
 
 
 # Copy the rest of the application
@@ -25,4 +27,4 @@ ENV PYTHONUNBUFFERED=1
 ENV PYTHONDONTWRITEBYTECODE=1
 
 # Default command (can be overridden)
-CMD ["uv", "run", "python", "train.py"]
+CMD ["python",  "train.py"]

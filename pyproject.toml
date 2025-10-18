@@ -9,7 +9,7 @@ dependencies = [
     "matplotlib>=3.10.6",
     "scikit-learn>=1.7.2",
     "tensorboard>=2.20.0",
-    "torch>=2.8.0",
-    "torchvision>=0.23.0",
+    "torch-cpu>=2.8.0",
+    "torchvision-cpu>=0.23.0",
     "tqdm>=4.67.1",
 ]
